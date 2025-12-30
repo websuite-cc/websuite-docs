@@ -328,6 +328,78 @@
     .docsify-copy-code-button:hover {
       background-color: var(--theme-color-light) !important;
     }
+    
+    /* Cover page styling - Dark mode with violet theme */
+    .cover {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%) !important;
+      background-color: #0f0f0f !important;
+      color: #e5e5e5 !important;
+    }
+    
+    .cover .cover-main {
+      color: #e5e5e5 !important;
+    }
+    
+    .cover h1 {
+      color: var(--theme-color-light) !important;
+      text-shadow: 0 2px 10px rgba(139, 92, 246, 0.3) !important;
+      font-size: 3.5em !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.5em !important;
+    }
+    
+    .cover p {
+      color: #d4d4d4 !important;
+      font-size: 1.3em !important;
+      margin-bottom: 2em !important;
+    }
+    
+    .cover .cover-main > p:last-child a {
+      color: #e5e5e5 !important;
+      background-color: rgba(139, 92, 246, 0.2) !important;
+      border: 2px solid var(--theme-color) !important;
+      border-radius: 8px !important;
+      padding: 0.75em 2em !important;
+      font-weight: 600 !important;
+      transition: all 0.3s ease !important;
+      margin: 0.5em !important;
+      display: inline-block !important;
+    }
+    
+    .cover .cover-main > p:last-child a:hover {
+      background-color: rgba(139, 92, 246, 0.4) !important;
+      border-color: var(--theme-color-light) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4) !important;
+    }
+    
+    .cover .cover-main > p:last-child a:last-child {
+      background-color: var(--theme-color) !important;
+      border-color: var(--theme-color) !important;
+    }
+    
+    .cover .cover-main > p:last-child a:last-child:hover {
+      background-color: var(--theme-color-light) !important;
+      border-color: var(--theme-color-light) !important;
+    }
+    
+    /* Cover page features list */
+    .cover ul {
+      color: #d4d4d4 !important;
+      text-align: left !important;
+      max-width: 600px !important;
+      margin: 2em auto !important;
+      font-size: 1.1em !important;
+    }
+    
+    .cover ul li {
+      color: #d4d4d4 !important;
+      margin: 0.5em 0 !important;
+    }
+    
+    .cover ul li strong {
+      color: var(--theme-color-light) !important;
+    }
   </style>
 </head>
 <body>
@@ -340,7 +412,7 @@
       loadSidebar: true,
       subMaxLevel: 3,
       auto2top: true,
-      coverpage: false,
+      coverpage: true,
       homepage: 'README.md',
       basePath: '/',
       relativePath: true,
