@@ -83,21 +83,32 @@
       border-bottom: 2px solid var(--theme-color);
       padding-bottom: 0.5em;
       margin-bottom: 1em;
-      color: #f5f5f5 !important;
+      color: var(--theme-color-light) !important;
     }
     
     .markdown-section h2 {
-      border-bottom: 1px solid #333333;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.3);
       padding-bottom: 0.3em;
       margin-top: 2em;
-      color: #f5f5f5 !important;
+      color: var(--theme-color-light) !important;
     }
     
-    .markdown-section h3,
+    .markdown-section h3 {
+      color: var(--theme-color-light) !important;
+      border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+      padding-bottom: 0.2em;
+    }
+    
     .markdown-section h4,
     .markdown-section h5,
     .markdown-section h6 {
-      color: #f5f5f5 !important;
+      color: var(--theme-color-light) !important;
+    }
+    
+    /* Force replace #34495e blue with violet anywhere it appears */
+    .markdown-section *[style*="#34495e"],
+    .markdown-section *[style*="34495e"] {
+      color: var(--theme-color-light) !important;
     }
     
     .markdown-section p {
