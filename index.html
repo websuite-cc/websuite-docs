@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -336,13 +336,13 @@
       search: {
         maxAge: 86400000, // 1 day
         paths: 'auto',
-        placeholder: 'Rechercher...',
-        noData: 'Aucun résultat trouvé',
+        placeholder: 'Search...',
+        noData: 'No results found',
         depth: 6
       },
       pagination: {
-        previousText: '◀ Précédent',
-        nextText: 'Suivant ▶',
+        previousText: '◀ Previous',
+        nextText: 'Next ▶',
         crossChapter: true,
         crossChapterText: true,
       },
@@ -353,7 +353,7 @@
             return html + '\n\n---\n\n' +
               '<div style="text-align: center; margin-top: 2em; padding-top: 2em; border-top: 1px solid #333333;">' +
               '<a href="' + vm.config.repo + '/blob/main/' + vm.route.file + '" target="_blank">' +
-              '✏️ Modifier cette page sur GitHub</a>' +
+              '✏️ Edit this page on GitHub</a>' +
               '</div>';
           });
           

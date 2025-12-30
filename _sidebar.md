@@ -1,39 +1,39 @@
-* [🏠 Accueil](/README.md)
+* [🏠 Home](/README.md)
 
-* **🚀 Guide de Démarrage**
-  * [Démarrage Rapide](/guide/quick-start.md)
+* **🚀 Getting Started**
+  * [Quick Start](/guide/quick-start.md)
   * [Installation](/guide/installation.md)
-  * [Développement](/guide/development.md)
-  * [Structure du Projet](/guide/structure.md)
+  * [Development](/guide/development.md)
+  * [Project Structure](/guide/structure.md)
 
 * **🏗️ Architecture**
-  * [Architecture Serveur](/guide/server-architecture.md)
-  * [Architecture des Agents](/guide/agents-architecture.md)
+  * [Server Architecture](/guide/server-architecture.md)
+  * [Agents Architecture](/guide/agents-architecture.md)
 
-* **📚 Gestion du Contenu**
+* **📚 Content Management**
   * [Articles](/content/articles.md)
-  * [Vidéos](/content/videos.md)
+  * [Videos](/content/videos.md)
   * [Podcasts](/content/podcasts.md)
-  * [Événements](/content/events.md)
+  * [Events](/content/events.md)
 
 * **🔌 API**
-  * [Vue d'ensemble](/api/overview.md)
-  * [Endpoints Publics](/api/public-endpoints.md)
-  * [Endpoints Protégés](/api/protected-endpoints.md)
-  * [Authentification](/api/authentication.md)
-  * [Exemples](/api/examples.md)
+  * [Overview](/api/overview.md)
+  * [Public Endpoints](/api/public-endpoints.md)
+  * [Protected Endpoints](/api/protected-endpoints.md)
+  * [Authentication](/api/authentication.md)
+  * [Examples](/api/examples.md)
 
 * **⚙️ Configuration**
-  * [Vue d'ensemble](/configuration/overview.md)
-  * [Flux RSS](/configuration/rss-feeds.md)
+  * [Overview](/configuration/overview.md)
+  * [RSS Feeds](/configuration/rss-feeds.md)
   * [SEO](/configuration/seo.md)
 
-* **🚀 Déploiement**
+* **🚀 Deployment**
   * [Cloudflare Pages](/deployment/cloudflare-pages.md)
-  * [Domaine Personnalisé](/deployment/custom-domain.md)
-  * [Variables d'Environnement](/deployment/environment-variables.md)
+  * [Custom Domain](/deployment/custom-domain.md)
+  * [Environment Variables](/deployment/environment-variables.md)
 
 * **❓ FAQ**
-  * [Questions Générales](/faq/general.md)
-  * [Dépannage](/faq/troubleshooting.md)
+  * [General Questions](/faq/general.md)
+  * [Troubleshooting](/faq/troubleshooting.md)
 
