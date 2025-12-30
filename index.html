@@ -310,7 +310,10 @@
       coverpage: false,
       homepage: 'README.md',
       basePath: '/',
-      relativePath: true,
+      relativePath: false,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
       search: {
         maxAge: 86400000, // 1 day
         paths: 'auto',
