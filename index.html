@@ -6,18 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>WebSuite Platform - Documentation</title>
   
-  <!-- Docsify CSS -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <!-- Docsify CSS - Dark theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/buble.css">
   
-  <!-- Prism CSS for code highlighting -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism.css">
+  <!-- Prism CSS for code highlighting - Dark theme -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.css">
   
   <style>
     :root {
-      --theme-color: #42b983;
-      --theme-color-dark: #35495e;
+      --theme-color: #8b5cf6;
+      --theme-color-dark: #6d28d9;
+      --theme-color-light: #a78bfa;
       --sidebar-width: 280px;
+    }
+    
+    /* Dark mode base colors */
+    body {
+      background-color: #0f0f0f !important;
+      color: #e5e5e5 !important;
     }
     
     .app-name-link img {
@@ -25,47 +31,94 @@
       margin: 0 auto;
     }
     
+    /* Sidebar dark mode */
     .sidebar {
-      background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+      background: linear-gradient(180deg, #1a1a1a 0%, #1e1e1e 100%) !important;
+      border-right: 1px solid #2a2a2a !important;
     }
     
     .sidebar ul li a {
-      color: #2c3e50;
+      color: #d4d4d4 !important;
       font-weight: 500;
     }
     
     .sidebar ul li a:hover {
-      color: var(--theme-color);
+      color: var(--theme-color-light) !important;
     }
     
+    .sidebar ul li.active > a {
+      color: var(--theme-color) !important;
+      border-right: 2px solid var(--theme-color) !important;
+    }
+    
+    /* Main content area */
     .markdown-section {
       max-width: 900px;
+      color: #e5e5e5 !important;
     }
     
     .markdown-section h1 {
       border-bottom: 2px solid var(--theme-color);
       padding-bottom: 0.5em;
       margin-bottom: 1em;
+      color: #f5f5f5 !important;
     }
     
     .markdown-section h2 {
-      border-bottom: 1px solid #eaecef;
+      border-bottom: 1px solid #333333;
       padding-bottom: 0.3em;
       margin-top: 2em;
+      color: #f5f5f5 !important;
+    }
+    
+    .markdown-section h3,
+    .markdown-section h4,
+    .markdown-section h5,
+    .markdown-section h6 {
+      color: #f5f5f5 !important;
+    }
+    
+    .markdown-section p {
+      color: #d4d4d4 !important;
+    }
+    
+    .markdown-section a {
+      color: var(--theme-color-light) !important;
+    }
+    
+    .markdown-section a:hover {
+      color: var(--theme-color) !important;
+    }
+    
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background-color: #1a1a1a;
+      color: #d4d4d4;
+    }
+    
+    .markdown-section hr {
+      border-color: #333333;
     }
     
     /* Code blocks styling */
     .markdown-section pre {
       border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      background-color: #1a1a1a !important;
     }
     
     /* Badge styling */
     .markdown-section code {
-      background-color: #f6f8fa;
+      background-color: #1a1a1a;
+      color: var(--theme-color-light);
       padding: 0.2em 0.4em;
       border-radius: 3px;
       font-size: 0.9em;
+    }
+    
+    .markdown-section pre code {
+      background-color: transparent;
+      color: #e5e5e5;
     }
     
     /* Table styling */
@@ -82,10 +135,39 @@
       font-weight: 600;
     }
     
+    .markdown-section table td {
+      background-color: #1a1a1a;
+      color: #e5e5e5;
+    }
+    
     .markdown-section table td,
     .markdown-section table th {
       padding: 0.75em;
-      border: 1px solid #dfe2e5;
+      border: 1px solid #333333;
+    }
+    
+    .markdown-section table tr:nth-child(even) td {
+      background-color: #1e1e1e;
+    }
+    
+    /* Search input */
+    .search input {
+      background-color: #1a1a1a !important;
+      border: 1px solid #333333 !important;
+      color: #e5e5e5 !important;
+    }
+    
+    .search input::placeholder {
+      color: #666666 !important;
+    }
+    
+    /* Pagination */
+    .pagination-item {
+      color: #d4d4d4 !important;
+    }
+    
+    .pagination-item:hover {
+      color: var(--theme-color-light) !important;
     }
     
     /* Custom scrollbar */
@@ -95,7 +177,7 @@
     }
     
     ::-webkit-scrollbar-track {
-      background: #f1f1f1;
+      background: #1a1a1a;
     }
     
     ::-webkit-scrollbar-thumb {
@@ -104,7 +186,69 @@
     }
     
     ::-webkit-scrollbar-thumb:hover {
-      background: var(--theme-color-dark);
+      background: var(--theme-color-light);
+    }
+    
+    /* GitHub link */
+    .markdown-section div[style*="text-align: center"] {
+      border-top-color: #333333 !important;
+    }
+    
+    .markdown-section div[style*="text-align: center"] a {
+      color: var(--theme-color-light) !important;
+    }
+    
+    .markdown-section div[style*="text-align: center"] a:hover {
+      color: var(--theme-color) !important;
+    }
+    
+    /* App name and title */
+    .app-name {
+      color: #f5f5f5 !important;
+    }
+    
+    /* Sidebar toggle button */
+    .sidebar-toggle {
+      background-color: #1a1a1a;
+      border-color: #333333;
+    }
+    
+    .sidebar-toggle span {
+      background-color: #e5e5e5;
+    }
+    
+    /* Loading indicator */
+    #app::before {
+      color: var(--theme-color) !important;
+    }
+    
+    /* Strong and emphasis */
+    .markdown-section strong {
+      color: #f5f5f5;
+    }
+    
+    .markdown-section em {
+      color: var(--theme-color-light);
+    }
+    
+    /* Lists */
+    .markdown-section ul,
+    .markdown-section ol {
+      color: #d4d4d4;
+    }
+    
+    .markdown-section li {
+      color: #d4d4d4;
+    }
+    
+    /* Copy code button */
+    .docsify-copy-code-button {
+      background-color: var(--theme-color) !important;
+      color: white !important;
+    }
+    
+    .docsify-copy-code-button:hover {
+      background-color: var(--theme-color-light) !important;
     }
   </style>
 </head>
@@ -140,7 +284,7 @@
           hook.beforeEach(function(html) {
             // Add edit on GitHub link
             return html + '\n\n---\n\n' +
-              '<div style="text-align: center; margin-top: 2em; padding-top: 2em; border-top: 1px solid #eaecef;">' +
+              '<div style="text-align: center; margin-top: 2em; padding-top: 2em; border-top: 1px solid #333333;">' +
               '<a href="' + vm.config.repo + '/blob/main/' + vm.route.file + '" target="_blank">' +
               '✏️ Modifier cette page sur GitHub</a>' +
               '</div>';
