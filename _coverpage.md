@@ -9,6 +9,6 @@
 - ⚡ **Edge Runtime** - Built on Bun.js for maximum performance
 
 [GitHub](https://github.com/websuite-cc/CMS)
-[Get Started](/README.md)
+[Quick Install](/README?id=%f0%9f%9a%80-quick-start)
 [Documentation](/README.md)
 
