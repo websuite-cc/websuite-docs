@@ -31,24 +31,48 @@
       margin: 0 auto;
     }
     
-    /* Sidebar dark mode */
+    /* Sidebar dark mode - Subtle styling */
     .sidebar {
-      background: linear-gradient(180deg, #1a1a1a 0%, #1e1e1e 100%) !important;
-      border-right: 1px solid #2a2a2a !important;
+      background: #0f0f0f !important;
+      border-right: 1px solid #1a1a1a !important;
     }
     
     .sidebar ul li a {
-      color: #d4d4d4 !important;
-      font-weight: 500;
+      color: #9ca3af !important;
+      font-weight: 400 !important;
+      transition: all 0.2s ease !important;
     }
     
     .sidebar ul li a:hover {
-      color: var(--theme-color-light) !important;
+      color: #e5e7eb !important;
+      background-color: transparent !important;
     }
     
     .sidebar ul li.active > a {
-      color: var(--theme-color) !important;
+      color: var(--theme-color-light) !important;
+      background-color: transparent !important;
       border-right: 2px solid var(--theme-color) !important;
+      font-weight: 500 !important;
+    }
+    
+    /* Sidebar headings (bold items) */
+    .sidebar ul li strong {
+      color: #d1d5db !important;
+      font-weight: 600 !important;
+    }
+    
+    /* Sidebar nested items */
+    .sidebar ul li ul li a {
+      color: #6b7280 !important;
+      padding-left: 1.5em !important;
+    }
+    
+    .sidebar ul li ul li a:hover {
+      color: #9ca3af !important;
+    }
+    
+    .sidebar ul li ul li.active > a {
+      color: var(--theme-color-light) !important;
     }
     
     /* Main content area */
@@ -310,7 +334,7 @@
       coverpage: false,
       homepage: 'README.md',
       basePath: '/',
-      relativePath: false,
+      relativePath: true,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
@@ -353,8 +377,8 @@
   <!-- Search plugin -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   
-  <!-- Pagination plugin -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- Pagination plugin - Must be loaded after Docsify -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
   
   <!-- Copy code plugin -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
