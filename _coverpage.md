@@ -8,7 +8,8 @@
 - 🔌 **30+ Integrations** - GitHub, Gmail, Slack, Stripe, and more
 - ⚡ **Edge Runtime** - Built on Bun.js for maximum performance
 
-[Cloudflare](https://github.com/websuite-cc/)
+
 [Quick Install](/README?id=%f0%9f%9a%80-quick-start)
 [Documentation](/README.md)
+[Cloudflare](https://github.com/websuite-cc/)
 
