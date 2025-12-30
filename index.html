@@ -161,13 +161,58 @@
       color: #666666 !important;
     }
     
-    /* Pagination */
+    /* Pagination - Always visible and styled */
+    .pagination {
+      margin-top: 3em !important;
+      margin-bottom: 2em !important;
+      padding-top: 2em !important;
+      border-top: 1px solid #333333 !important;
+    }
+    
     .pagination-item {
-      color: #d4d4d4 !important;
+      color: var(--theme-color-light) !important;
+      font-weight: 600 !important;
+      font-size: 1.1em !important;
+      padding: 0.75em 1.5em !important;
+      border-radius: 6px !important;
+      background-color: #1a1a1a !important;
+      border: 1px solid #333333 !important;
+      transition: all 0.3s ease !important;
+      display: inline-block !important;
+      margin: 0 0.5em !important;
     }
     
     .pagination-item:hover {
-      color: var(--theme-color-light) !important;
+      color: white !important;
+      background-color: var(--theme-color) !important;
+      border-color: var(--theme-color) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3) !important;
+    }
+    
+    .pagination-item:active {
+      transform: translateY(0) !important;
+    }
+    
+    .pagination-item-title {
+      color: #d4d4d4 !important;
+      font-size: 0.9em !important;
+      margin-top: 0.5em !important;
+      display: block !important;
+    }
+    
+    .pagination-item-label {
+      color: var(--theme-color) !important;
+      font-size: 0.85em !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.5px !important;
+      margin-bottom: 0.5em !important;
+      display: block !important;
+    }
+    
+    /* Ensure pagination is always at the bottom of content */
+    .markdown-section {
+      padding-bottom: 2em !important;
     }
     
     /* Custom scrollbar */
@@ -274,8 +319,8 @@
         depth: 6
       },
       pagination: {
-        previousText: 'Précédent',
-        nextText: 'Suivant',
+        previousText: '◀ Précédent',
+        nextText: 'Suivant ▶',
         crossChapter: true,
         crossChapterText: true,
       },
@@ -288,6 +333,11 @@
               '<a href="' + vm.config.repo + '/blob/main/' + vm.route.file + '" target="_blank">' +
               '✏️ Modifier cette page sur GitHub</a>' +
               '</div>';
+          });
+          
+          hook.afterEach(function(html) {
+            // Ensure pagination is always rendered
+            return html;
           });
         }
       ]
